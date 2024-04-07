@@ -1,18 +1,13 @@
-# Drowsiness Detection Model Version 1:
-This project utilized the following datasets:
-<br>
-* Driver Drowsiness Dataset (DDD): https://www.kaggle.com/datasets/ismailnasri20/driver-drowsiness-dataset-ddd
-* Yawn Dataset: https://www.kaggle.com/datasets/serenaraju/yawn-eye-dataset-new
+# Application of Convolutional Neural Networks in Drowsiness Detection using Facial Features:
 
-<br><br>
-Data Augmentation was performed on these datasets by namely flipping the images, altering brightness/contrast and also applying blurring. As a result, we were able to increase the size of our dataset by 6 times to almost 340k images. The code for data augmentation can be found withing `data_augmentation.ipynb` file
-<br><br>
-Followed by this a Convolutional Neural Network was trained for 20 epochs, with 0.02 validation split and a batch size of 32. Also, the optimizer used is Adam with the sparse categorical cross-entropy loss function. You will find the details of the model structure in the `CNN_model.ipynb` file
-<br><br>
-The model was able to achieve an **accuracy of 90.009%** in the validation phase and therefore, we further interfaced it with the webcam in order to make use to it in real-time scenarios. The implementation code for this is available within `webcame_testing.ipynb` file
-<br><br>
-We also made use of the Frontal Face HAAR Cascade pre-trained model by OpenCV in order to extract just the face from the entire image and feed it into the model, thereby making our model independent of the distance of the face from the camera as well as in situations where no face can be detected 
-<br><br>
-At present we are processing around 1 Frame per second due to hardware constraints
-<br><br>
-In the future, the aim is to further extend this project and make the detection system more robust by testing out different models like R-CNNs and Transformers as well as improving the structure of the current model
+1. Obtained a comprehensive dataset comprising over 340,000 images through a combination of the Driver Drowsiness Dataset (DDD) and Yawn Dataset, augmented sixfold using advanced techniques. This extensive dataset served as the cornerstone for robust model training and validation.
+
+2. Implemented the HAAR Cascade Frontal face detector to accurately identify and extract tightly cropped images around the face, ensuring focus solely on relevant facial features.
+
+3. Developed a tailored Convolutional Neural Network (CNN) architecture for drowsiness detection, undergoing rigorous training over 20 epochs with meticulous parameter tuning. Utilizing the Adam optimizer and sparse categorical cross-entropy loss function, the model achieved an impressive validation accuracy of 90.009%.
+
+4. Engineered a testing interface leveraging OpenCV, seamlessly integrating with live video feeds for real-time analysis. With the capability to process frames at a rate of 1 fps (on CPU), the interface accurately computed the drowsiness percentage, providing timely insights into the driver's alertness level.
+
+5. Implemented a frame counter mechanism within the testing interface to mitigate false positives and account for temporal dynamics, enhancing the system's reliability in real-world scenarios.
+
+6. Ongoing development focuses on exploring alternative model architectures and optimization strategies, with a specific emphasis on developing lightweight implementations suitable for deployment on embedded systems within vehicles. This extension aims to broaden the solution's applicability and scalability across diverse operational environments.
