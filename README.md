@@ -4,7 +4,7 @@
 
 2. Implemented the HAAR Cascade Frontal face detector to accurately identify and extract tightly cropped images around the face, ensuring focus solely on relevant facial features.
 
-3. Developed a tailored Convolutional Neural Network (CNN) architecture for drowsiness detection, undergoing rigorous training over 20 epochs with meticulous parameter tuning. Utilizing the Adam optimizer and sparse categorical cross-entropy loss function, the model achieved an impressive validation accuracy of 90.009%.
+3. Developed a tailored Convolutional Neural Network (CNN) architecture for drowsiness detection, undergoing rigorous training over 20 epochs with meticulous parameter tuning. Utilizing the Adam optimizer and sparse categorical cross-entropy loss function, the model achieved an impressive validation accuracy of 90.13%.
 
 4. Engineered a testing interface leveraging OpenCV, seamlessly integrating with live video feeds for real-time analysis. With the capability to process frames at a rate of 1 fps (on CPU), the interface accurately computed the drowsiness percentage, providing timely insights into the driver's alertness level.
 
